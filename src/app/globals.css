@@ -1,0 +1,349 @@
+@tailwind utilities;
+
+:root {
+  --mainGreen: #052819;
+  --background: #3aa378;
+  --foreground: #000000;
+  --mainBG: #f4f1ea;
+  --sectionBG: #b7b0a0;
+  --cardSmText: #7f7667;
+  --borderCol: #7f7667;
+  --iconCol: #303030;
+  --inputFieldBG: #d6d1c8;
+  --lineBorderCol: #d6d1c8;
+  --hoverBG: #000000;
+  --lightHoverBG: #00000033;
+  --errorCol: #ff8c88;
+  --errorBG: #ea5757;
+  --newGreen: #052819;
+  --sidebarText: #55cd9a;
+  --cardBackground: #b7b0a0;
+  --successCol: #1b5e20;
+  --borderDefault: #b7b0a0;
+  --borderDefault2: #b7b0a0;
+  --buttonDisabledCol: #bdbdbd;
+  --borderActive: #3aa378;
+  --borderMuted: #ddd8cd;
+  --bgSubtle: #ddd8cd;
+  --bgSubtle2: #ddd8cd;
+  --bgElevated: #ffffff;
+  --loginBtn: #345145;
+  --loginColor: #15ffab;
+  --secondaryCol: #494239;
+  --textTheme: #212121;
+  --bgAction: #b6efd6;
+  --bgActionHover: #38755b;
+  --textAction: #212121;
+  --textActionHover: #fff;
+  --btnTheme: #b6efd6;
+  --btnThemeColor: #212121;
+  --notifRead: #40BC86;
+  --subTitleText: #494239;
+  --disabledBtnBG: #4E4E4E1a;
+  --disabledBtnText: #3A3A3A1a;
+  --btnColor: #fff;
+  --redButton: #fddcdc;
+  --bgCanvas: #f4f1ea;
+  --bgField: #ffffff;
+  --bgTextEditor: #ffffff;
+  --bgSkeleton: #f4f1ea;
+  --startButton: #fff;
+  --gradeAText: #D3F9D8;
+  --gradeBBg: #29B6F6;
+  --gradeBText: #D0F0FD;
+  --chatBG: #5F574B;
+
+
+
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root */
+
+
+.dark {
+  --mainGreen: #052819;
+  --background: #42ce91;
+  --foreground: #ededed;
+  --mainBG: #121212;
+  --sectionBG: #303030;
+  --cardSmText: #6c6c6c;
+  --borderCol: #6c6c6c;
+  --iconCol: #b5b5b5;
+  --inputFieldBG: #3a3a3a;
+  --lineBorderCol: #3a3a3a;
+  --hoverBG: #000000;
+  --lightHoverBG: #00000033;
+  --errorCol: #ff8c88;
+  --errorBG: #ea5757;
+  --newGreen: #fff;
+  --sidebarText: #55cd9a;
+  --cardBackground: #1c1c1c;
+  --successCol: #2ecc71;
+  --borderDefault: #303030;
+  --borderDefault2: #383838;
+  --buttonDisabledCol: #3a3a3a;
+  --borderActive: #40bc86;
+  --borderMuted: #383838;
+  --bgSubtle: #303030;
+  --bgSubtle2: #1c1c1c;
+  --bgElevated: #262626;
+  --loginBtn: #40bc86;
+  --loginColor: #000000;
+  --secondaryCol: #fcfcf7;
+  --textTheme: #ffffff;
+  --bgAction: #243830;
+  --bgActionHover: #345145;
+  --textAction: #fff;
+  --textActionHover: #15ffab;
+  --btnTheme: #345145;
+  --btnThemeColor: #40bc86;
+  --btnColor: #40bc86;
+  --notifRead: #15FFAB;
+  --subTitleText: #B5B5B5;
+  --disabledBtnBG: #4E4E4E;
+  --disabledBtnText: #3A3A3A1a;
+  --redButton: #7e3539;
+  --bgCanvas: #262626;
+  --bgField: #303030;
+  --bgTextEditor: #1c1c1c;
+  --bgSkeleton: #303030;
+  --startButton: #fff;
+  --gradeAText: #314633;
+  --gradeBBg: #0D47A1;
+  --gradeBText: #fff;
+  --chatBG: #345145;
+
+
+}
+
+/* } */
+
+body {
+  color: var(--foreground);
+  background: var(--mainGreen);
+  font-family: var(--font-public-sans), sans-serif;
+
+}
+
+.mi {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-public-sans), sans-serif;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+}
+
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition-delay: 1000000000s;
+}
+
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  transition-delay: 1000000000s;
+}
+
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+.ql-container.ql-snow .ql-editor.ql-blank::before {
+  color: var(--cardSmText);
+}
+
+.ql-container .ql-editor::before {
+  color: var(--cardSmText);
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+
+
+
+:root {
+  --fs-xxs: 11px;
+  --fs-xs: 12px;
+  --fs-xsm: 13px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+  --fs-2xl: 21px;
+  --fs-3xl: 26px;
+  --fs-4xl: 30px;
+  --fs-5xl: 30px;
+}
+
+
+@media (min-width: 1600px) {
+  :root {
+    --fs-xxs: 11px;
+    --fs-xs: 12px;
+    --fs-xsm: 13px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-2xl: 24px;
+    --fs-3xl: 30px;
+    --fs-4xl: 36px;
+    --fs-5xl: 40px;
+  }
+}
+
+@media (min-width: 1900px) {
+  :root {
+    --fs-xxs: 11px;
+    --fs-xs: 13px;
+    --fs-xsm: 14px;
+    --fs-sm: 15px;
+    --fs-md: 17px;
+    --fs-lg: 19px;
+    --fs-xl: 21px;
+    --fs-2xl: 24px;
+    --fs-3xl: 30px;
+    --fs-4xl: 36px;
+    --fs-5xl: 40px;
+  }
+}
+
+@media (min-width: 2100px) {
+  :root {
+    --fs-xxs: 12px;
+    --fs-xs: 14px;
+    --fs-xsm: 15px;
+    --fs-sm: 16px;
+    --fs-md: 18px;
+    --fs-lg: 20px;
+    --fs-xl: 22px;
+    --fs-2xl: 24px;
+    --fs-3xl: 30px;
+    --fs-4xl: 36px;
+    --fs-5xl: 40px;
+  }
+}
+
+
+
+
+@media (min-width: 2300px) {
+  :root {
+    --fs-xxs: 15px;
+    --fs-xs: 18px;
+    --fs-xsm: 19px;
+    --fs-sm: 20px;
+    --fs-md: 21px;
+    --fs-lg: 24px;
+    --fs-xl: 28px;
+    --fs-2xl: 34px;
+    --fs-3xl: 38px;
+    --fs-4xl: 42px;
+    --fs-5xl: 48px;
+  }
+}
+
+@keyframes progressPulse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-pulse::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 20%;
+  height: 100%;
+  background: rgba(4, 188, 134, 0.8); 
+  animation: progressPulse 2s ease-in-out infinite;
+}
+
+@keyframes progressPulse {
+  0% { 
+    left: -20%; 
+  }
+  100% { 
+    left: 120%; 
+  }
+}
+
+
+
+:root {
+  --space-0: 0px;
+  --space-0_5: 0.125rem;
+  /* 2px */
+  --space-1: 0.25rem;
+  /* 4px */
+  --space-1_5: 0.375rem;
+  /* 6px */
+  --space-2: 0.5rem;
+  /* 8px */
+  --space-2_5: 0.625rem;
+  /* 10px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-3_5: 0.875rem;
+  /* 14px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-5: 1.25rem;
+  /* 20px */
+  --space-6: 1.5rem;
+  /* 24px */
+  --space-7: 1.75rem;
+  /* 28px */
+}
+
+
+@media (min-width: 2300px) {
+  :root {
+    --space-0_5: 0.25rem;
+    /* 4px */
+    --space-1: 0.375rem;
+    /* 6px */
+    --space-1_5: 0.625rem;
+    /* 10px */
+    --space-2: 0.75rem;
+    /* 12px */
+    --space-2_5: 0.875rem;
+    /* 14px */
+    --space-3: 1rem;
+    /* 16px */
+    --space-3_5: 1.125rem;
+    /* 18px */
+    --space-4: 1.375rem;
+    /* 22px */
+    --space-5: 1.75rem;
+    /* 28px */
+    --space-6: 2.125rem;
+    /* 34px */
+    --space-7: 2.5rem;
+    /* 40px */
+  }
+}
