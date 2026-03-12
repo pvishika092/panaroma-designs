@@ -200,8 +200,8 @@ const [billingInfo, setBillingInfo] = useState({
         {
           icon: <LuCalendar className="text-cardSmText text-lg" />,
           label: "Next Refill",
-          value: "12 days",
-          sub: "Nov 1, 2024",
+          value: "—",
+          sub: "Plan expired",
         },
         {
           icon: <FiAward className="text-cardSmText text-lg" />,
@@ -345,19 +345,19 @@ const [billingInfo, setBillingInfo] = useState({
     <p className="text-md font-normal text-textTheme">Current Plan</p>
     <button className="text-sm font-medium flex gap-2 items-center text-textTheme border-solid bg-transparent border-[0.5px] shadow-sm border-borderMuted rounded-md px-3 py-2">
      <FiSettings className="text-sm"/>
-      Manage Plan
+      Renew Plan
     </button>
   </div>
 
   <div className="px-5  pb-2 ">
    <div className="">
-     <p className="text-2xl font-normal text-textTheme">Growth Pro</p>
+     <p className="text-2xl font-normal text-textTheme flex items-center gap-2">Growth Pro <span className="text-errorBG text-xs font-medium"> Expired </span> </p>
     <p className="text-xsm text-textTheme mt-1 mb-5">$990 / year </p>
    </div>
 
     {[
       { icon: <TbShieldBolt className="text-md" />, label: "Included monthly credits", value: "600,000" },
-      { icon: <LuCalendar className="text-md" />, label: "Next refill", value: isPlanExpired ? "—" : "Nov 01, 2026" },
+      { icon: <LuCalendar className="text-md" />, label: "Next refill", value: true ? "—" : "Nov 01, 2026" },
       { icon: <GrRefresh className="text-md" />, label: "Billing cycle", value: "Annual" },
     ].map(({ icon, label, value }, i) => (
       <div key={i} className="flex items-center border-t-0  border-solid border-r-0 border-l-0 border-b last:border-b-0 border-borderMuted py-3 justify-between py-3 ">
@@ -365,7 +365,7 @@ const [billingInfo, setBillingInfo] = useState({
           {icon}
           {label}
         </div>
-        <span className={`text-sm font-medium tracking-wide ${isPlanExpired && label === "Next refill" ? "text-cardSmText" : "text-textTheme"}`}>
+        <span className={`text-sm font-medium tracking-wide ${false && label === "Next refill" ? "text-cardSmText" : "text-textTheme"}`}>
           {value}
         </span>
       </div>

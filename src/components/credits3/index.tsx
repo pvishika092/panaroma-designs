@@ -13,8 +13,8 @@ import { LuBadge, LuCalendar, LuSettings2, LuTrendingUp, LuWallet } from "react-
 import { RxCheckCircled } from "react-icons/rx";
 import { BiSort } from "react-icons/bi";
 import { useSystemTheme } from "@/src/hooks/useSystemsTheme";
-import CreditsBillingModal from "./modal";
 import { GrRefresh } from "react-icons/gr";
+import CreditsBillingModal from "../credits/modal";
 
 const SEGMENT_COLORS = [
   "#3A86FE",
@@ -188,7 +188,7 @@ const [billingInfo, setBillingInfo] = useState({
         {
           icon: <LuWallet className="text-cardSmText text-lg" />,
           label: "Available Balance",
-          value: availableCredits.toLocaleString(),
+          value: "0",
           sub: `of ${totalCredits.toLocaleString()} credits`,
         },
         {
@@ -200,8 +200,8 @@ const [billingInfo, setBillingInfo] = useState({
         {
           icon: <LuCalendar className="text-cardSmText text-lg" />,
           label: "Next Refill",
-          value: "12 days",
-          sub: "Nov 1, 2024",
+          value: "12 Days",
+          sub: "6 Nov, 2025",
         },
         {
           icon: <FiAward className="text-cardSmText text-lg" />,
@@ -246,7 +246,7 @@ const [billingInfo, setBillingInfo] = useState({
     <div className="mt-6 px-6">
       <div className="flex  flex-col mt-1 mb-3">
         <span className="text-xsm font-medium text-subTitleText mb-1">Credits consumed this cycle</span>
-        <p className="text-4xl font-light text-textTheme">{usedCredits.toLocaleString()} <span className="text-sm text-cardSmText"> / 50,000</span> </p>
+        <p className="text-4xl font-light text-textTheme">50,000 <span className="text-sm text-cardSmText"> / 50,000</span> </p>
       </div>
 
                     <p className="text-xsm font-medium mb-2 mt-4 text-textTheme">Usage breakdown</p>
@@ -345,19 +345,19 @@ const [billingInfo, setBillingInfo] = useState({
     <p className="text-md font-normal text-textTheme">Current Plan</p>
     <button className="text-sm font-medium flex gap-2 items-center text-textTheme border-solid bg-transparent border-[0.5px] shadow-sm border-borderMuted rounded-md px-3 py-2">
      <FiSettings className="text-sm"/>
-      Manage Plan
+      Renew Plan
     </button>
   </div>
 
   <div className="px-5  pb-2 ">
    <div className="">
-     <p className="text-2xl font-normal text-textTheme">Growth Pro</p>
+     <p className="text-2xl font-normal text-textTheme flex items-center gap-2">Growth Pro  </p>
     <p className="text-xsm text-textTheme mt-1 mb-5">$990 / year </p>
    </div>
 
     {[
       { icon: <TbShieldBolt className="text-md" />, label: "Included monthly credits", value: "600,000" },
-      { icon: <LuCalendar className="text-md" />, label: "Next refill", value: isPlanExpired ? "—" : "Nov 01, 2026" },
+      { icon: <LuCalendar className="text-md" />, label: "Next refill", value: false ? "—" : "Nov 01, 2026" },
       { icon: <GrRefresh className="text-md" />, label: "Billing cycle", value: "Annual" },
     ].map(({ icon, label, value }, i) => (
       <div key={i} className="flex items-center border-t-0  border-solid border-r-0 border-l-0 border-b last:border-b-0 border-borderMuted py-3 justify-between py-3 ">
@@ -365,7 +365,7 @@ const [billingInfo, setBillingInfo] = useState({
           {icon}
           {label}
         </div>
-        <span className={`text-sm font-medium tracking-wide ${isPlanExpired && label === "Next refill" ? "text-cardSmText" : "text-textTheme"}`}>
+        <span className={`text-sm font-medium tracking-wide ${false && label === "Next refill" ? "text-cardSmText" : "text-textTheme"}`}>
           {value}
         </span>
       </div>

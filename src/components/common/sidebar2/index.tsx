@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { FaClipboardList, FaFolderClosed } from "react-icons/fa6";
-import { BarComponent } from "./barComponent";
 import { RiFileCopy2Fill, RiHome4Fill, RiHome6Fill } from "react-icons/ri";
 import Image from "next/image";
 import { IoIosSettings } from "react-icons/io";
@@ -15,6 +14,7 @@ import { LuChevronsDownUp, LuChevronUp } from "react-icons/lu";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FiArrowUpRight } from "react-icons/fi";
 import { BsChevronExpand } from "react-icons/bs";
+import { BarComponent } from "../sidebar/barComponent";
 
 export const Sidebar = () => {
   const { theme, toggleTheme } = useSystemTheme();
@@ -26,8 +26,8 @@ export const Sidebar = () => {
     name: "Nikhil",
     email: "nikhil@example.com",
     initials: "N",
-    creditsUsed: 3500,
-    creditsTotal: 10000,
+    creditsUsed: 50000,
+    creditsTotal: 50000,
     renewsIn: 21,
   };
 
@@ -85,7 +85,8 @@ export const Sidebar = () => {
   <div className="flex items-center justify-between mb-1.5">
     {/* <span className="text-xs text-sidebarText opacity-50 uppercase tracking-wider text-xxs font-semibold" >Usage</span> */}
     <span className="text-xs font-semibold text-sidebarText">
-      {user.creditsUsed.toLocaleString()} / {user.creditsTotal.toLocaleString()}
+        No Credits left
+      {/* {user.creditsUsed.toLocaleString()} / {user.creditsTotal.toLocaleString()} */}
     </span>
   </div>
 

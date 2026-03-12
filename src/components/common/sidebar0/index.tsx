@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { FaClipboardList, FaFolderClosed } from "react-icons/fa6";
-import { BarComponent } from "./barComponent";
 import { RiFileCopy2Fill, RiHome4Fill, RiHome6Fill } from "react-icons/ri";
 import Image from "next/image";
 import { IoIosSettings } from "react-icons/io";
@@ -15,6 +14,7 @@ import { LuChevronsDownUp, LuChevronUp } from "react-icons/lu";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FiArrowUpRight } from "react-icons/fi";
 import { BsChevronExpand } from "react-icons/bs";
+import { BarComponent } from "../sidebar/barComponent";
 
 export const Sidebar = () => {
   const { theme, toggleTheme } = useSystemTheme();
@@ -26,8 +26,8 @@ export const Sidebar = () => {
     name: "Nikhil",
     email: "nikhil@example.com",
     initials: "N",
-    creditsUsed: 3500,
-    creditsTotal: 10000,
+    creditsUsed: 0,
+    creditsTotal: 50000,
     renewsIn: 21,
   };
 
