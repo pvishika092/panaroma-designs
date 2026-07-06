@@ -12,7 +12,7 @@ export const BarComponent = ({
             onClick={onClick}
             href={href}
             title={title}
-            className={`w-full relative group ease-in-out hover:text-white rounded-full p-1 no-underline transition-all duration-300 flex gap-4 ${isActive ? "text-white" : "text-sidebarText"
+            className={`w-[80%] relative group ease-in-out hover:text-white rounded-lg  py-2 px-1 p no-underline transition-all duration-300 flex items-center flex-col gap-1 ${isActive ? "text-white" : "text-sidebarText "
                 }`}
         >
             {/* {isActive && (
@@ -26,7 +26,7 @@ export const BarComponent = ({
             <span className="relative z-10 text-md">{icon}</span>
 
             {title && (
-                <span className="text-xs font-semibold opacity-60 text-left relative z-10">
+                <span className="text-xxs font-semibold opacity-60 text-center  relative z-10">
                     {title}
                 </span>
             )}

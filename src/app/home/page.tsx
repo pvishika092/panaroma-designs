@@ -12,7 +12,7 @@ const AnalyticsPage = () => {
       <Sidebar />
       <div className="min-h-full  w-full flex flex-col overflow-hidden bg-mainBG rounded-l-2xl ">
         
-        <CreditsPage />
+        {/* <CreditsPage /> */}
       </div>
     </div>
   );

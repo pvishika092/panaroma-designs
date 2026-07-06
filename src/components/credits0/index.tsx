@@ -540,7 +540,7 @@ export default function CreditsPage() {
             <div className="mt-4 flex gap-4 items-stretch">
 
               {/* Left — Usage by feature — ZERO STATE */}
-              <div className="flex-[1] bg-bgElevated rounded-2xl border border-borderMuted py-6 shadow-md">
+              <div className="flex-[1] bg-bgElevated h-[500px] rounded-2xl border border-borderMuted py-6 shadow-md">
                 <div className="flex items-center justify-between px-6 mb-1 border-b border-solid border-borderMuted border-t-0 border-l-0 border-r-0 pb-5">
                   <div>
                     <h2 className="text-lg font-normal text-textTheme">Usage by feature</h2>
@@ -548,7 +548,7 @@ export default function CreditsPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 px-6">
+                <div className="mt-16 px-6">
                   {/* <div className="flex flex-col mt-1 mb-3">
                     <span className="text-xsm font-medium text-subTitleText mb-1">Credits consumed this cycle</span>
                     <p className="text-4xl font-light text-textTheme">0 <span className="text-sm text-cardSmText">/ 50,000</span></p>
@@ -562,7 +562,7 @@ export default function CreditsPage() {
                   {/* Empty state illustration */}
                   <div className="flex flex-col mt-8 items-center justify-center py-10 text-center">
                     <div className="w-10 h-10 rounded-xl bg-bgSkeleton flex items-center justify-center mb-4">
-                      <TbChartDonut size={18} className="text-cardSmText" />
+                      <TbChartDonut  className="text-cardSmText text-2xl" />
                     </div>
                     <p className="text-sm font-medium text-textTheme mb-1">No usage yet</p>
                     <p className="text-xs text-cardSmText leading-relaxed max-w-xs">
@@ -573,7 +573,7 @@ export default function CreditsPage() {
               </div>
 
               {/* Right — Credit usage log — ZERO STATE */}
-              <div className="flex-[1.5] bg-bgElevated shadow-md rounded-2xl border border-borderMuted py-7">
+              <div className="flex-[1] bg-bgElevated shadow-md rounded-2xl border border-borderMuted py-7">
                 <div className="flex items-center justify-between mb-1 pb-5 border-b border-solid px-7 border-borderMuted border-t-0 border-l-0 border-r-0">
                   <div>
                     <h2 className="text-lg font-normal text-textTheme">Credit Usage Log</h2>
@@ -588,18 +588,18 @@ export default function CreditsPage() {
                 </div>
 
                 {/* Column headers */}
-                <div className="grid grid-cols-[1.5fr_1.5fr_1fr_60px] gap-4 pb-3 mt-6 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0">
+                {/* <div className="grid grid-cols-[1.5fr_1.5fr_1fr_60px] gap-4 pb-3 mt-6 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0">
                   {["Resource", "Date & Time", "Performed By", "Credits"].map((h) => (
                     <p key={h} className="text-xs font-semibold text-cardSmText uppercase tracking-wider">{h}</p>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Empty state */}
-                <div className="flex flex-col items-center justify-center py-16 text-center">
+                <div className="flex mt-8 flex-col items-center justify-center py-16 text-center">
                   <div className="w-10 h-10 rounded-xl bg-bgSkeleton flex items-center justify-center mb-4">
-                    <HiOutlineSparkles size={20} className="text-cardSmText" />
+                    <HiOutlineSparkles className="text-cardSmText text-2xl" />
                   </div>
-                  <p className="text-sm font-medium text-textTheme mb-1">No transactions yet</p>
+                  <p className="text-sm font-medium text-textTheme  mb-1">No transactions yet</p>
                   <p className="text-xs text-cardSmText leading-relaxed max-w-xs">
                     Your credit activity will appear here once you start using AI features.
                   </p>
@@ -708,7 +708,7 @@ export default function CreditsPage() {
               {/* Empty state */}
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <div className="w-10 h-10 rounded-xl bg-bgSkeleton flex items-center justify-center mb-4">
-                  <TbFileInvoice size={18} className="text-cardSmText" />
+                  <TbFileInvoice  className="text-cardSmText text-lg" />
                 </div>
                 <p className="text-sm font-medium text-textTheme mb-1">No invoices yet</p>
                 <p className="text-xs text-cardSmText leading-relaxed max-w-xs">

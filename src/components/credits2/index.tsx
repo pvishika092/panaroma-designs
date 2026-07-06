@@ -289,44 +289,44 @@ const [billingInfo, setBillingInfo] = useState({
   </div>
 
   {/* Right — Credit usage log */}
-  <div className="flex-[1.5] bg-bgElevated shadow-md rounded-2xl border border-borderMuted py-7">
-    <div className="flex items-center justify-between mb-1 pb-5 border-b border-solid px-7 border-borderMuted border-t-0 border-l-0 border-r-0">
-      <div>
-        <h2 className="text-lg font-normal text-textTheme">Credit Usage Log</h2>
-        <p className="text-xsm text-subTitleText mt-0.5">Recent credit activity across models, automations, and resources</p>
+  <div className="flex-[1] bg-bgElevated shadow-md rounded-2xl border border-borderMuted py-7">
+      <div className="flex items-center justify-between mb-1 pb-5 border-b border-solid px-7 border-borderMuted border-t-0 border-l-0 border-r-0">
+        <div>
+          <h2 className="text-lg font-normal text-textTheme">Credit Usage Log</h2>
+          <p className="text-xsm text-subTitleText mt-0.5">Recent credit activity across models, automations, and resources</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <button className="flex items-center gap-1.5 border border-borderMuted border-solid hover:border-[1.5px] hover:border-borderActive bg-transparent rounded-lg px-3 py-2 text-sm text-textTheme cursor-pointer transition-colors">
+            <FiFilter className="text-lg" />
+            Filter
+          </button>
+        </div>
       </div>
-      <div className="flex items-center gap-2">
-        <button className="flex items-center gap-1.5 border border-borderMuted border-solid hover:border-[1.5px] hover:border-borderActive bg-transparent rounded-lg px-3 py-2 text-sm text-textTheme cursor-pointer transition-colors">
-          <FiFilter className="text-lg" />
-          Filter
-        </button>
-      </div>
-    </div>
-    <div className="mt-6">
-      <div className="grid grid-cols-[1.5fr_1.5fr_1fr_60px] gap-4 pb-3 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0">
-        {[ "Resource", "Date & Time",  "Performed By", "Credits"].map((h) => (
-          <p key={h} className="text-xs font-semibold text-cardSmText uppercase tracking-wider">{h}</p>
+      <div className="mt-6">
+        <div className="grid grid-cols-[1.5fr_1fr_80px] gap-4 pb-3 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0">
+          {[ "Resource",  "Performed By", "Credits"].map((h) => (
+            <p key={h} className="text-xs font-semibold text-cardSmText uppercase tracking-wider">{h}</p>
+          ))}
+        </div>
+        {usageLog.map((row, i) => (
+          <div key={i} className="grid grid-cols-[1.5fr_1fr_80px] gap-4 py-4 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0 items-center transition-colors">
+            
+             <div>
+              <p className="text-sm font-medium text-textTheme">{row.resource}</p>
+              <p className="text-xs text-cardSmText">{row.sub}</p>
+            </div>
+  
+            {/* <p className="text-xsm font-normal tracking-wide text-textTheme flex flex-col">{row.date} <span className="text-cardSmText text-xs">{row.time}</span> </p> */}
+           
+          
+            <p className="text-sm text-textTheme flex flex-col">{row.performedBy}<span className="text-cardSmText text-xs"> on {row.date}</span></p>
+            <p className={`text-sm font-medium tracking-wide ${row.credits > 0 ? "text-borderActive" : "text-errorBG"}`}>
+              {row.credits > 0 ? `+${row.credits.toLocaleString()}` : row.credits.toLocaleString()}
+            </p>
+          </div>
         ))}
       </div>
-      {usageLog.map((row, i) => (
-        <div key={i} className="grid grid-cols-[1.5fr_1.5fr_1fr_60px] gap-4 py-4 px-7 border-b border-borderMuted border-solid border-r-0 border-t-0 border-l-0 items-center transition-colors">
-          
-           <div>
-            <p className="text-sm font-medium text-textTheme">{row.resource}</p>
-            <p className="text-xs text-cardSmText">{row.sub}</p>
-          </div>
-
-          <p className="text-xsm font-normal tracking-wide text-textTheme">{row.time}</p>
-         
-        
-          <p className="text-sm text-textTheme">{row.performedBy}</p>
-          <p className={`text-sm font-medium tracking-wide ${row.credits > 0 ? "text-borderActive" : "text-errorBG"}`}>
-            {row.credits > 0 ? `+${row.credits.toLocaleString()}` : row.credits.toLocaleString()}
-          </p>
-        </div>
-      ))}
     </div>
-  </div>
 
 </div>
   </>
@@ -351,7 +351,7 @@ const [billingInfo, setBillingInfo] = useState({
 
   <div className="px-5  pb-2 ">
    <div className="">
-     <p className="text-2xl font-normal text-textTheme flex items-center gap-2">Growth Pro <span className="text-errorBG text-xs font-medium"> Expired </span> </p>
+     <p className="text-2xl font-normal text-textTheme flex items-center gap-2">Growth Pro <span className="text-errorBG bg-[#ef4444]/10 rounded-full px-2 p-0.5 text-xs font-medium"> Expired </span> </p>
     <p className="text-xsm text-textTheme mt-1 mb-5">$990 / year </p>
    </div>
 
